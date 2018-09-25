@@ -35,10 +35,11 @@
 	display: block;
 	}
 .leaflet-marker-icon{
-	width: 75px !important;
-	height: 23px !important;
+	width: 100px !important;
+	height: inherit !important;
 }
 .leaflet-marker-shadow{
+	display: none !important;
 	width: 75px !important;
 	height: 23px !important;
 }
