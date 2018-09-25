@@ -23,8 +23,20 @@ dc.leafletChart = function (_chart) {
         //    attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
         //    maxZoom: 14
         //}).addTo(map); 
+        // var marker = L.marker([19.7647028,96.3172560]).bindLabel('Nay Pyi Taw, Myanmar', { noHide: true }).addTo(map);
 
-        var marker = L.marker([19.7647028,96.3172560]).addTo(map).bindPopup('Nay Pyi Taw, Myanmar');
+        var myIcon = L.icon({
+            iconUrl: 'http://www.jcwsba.com/images/logo_filler.png',
+            iconSize: [30, 30],
+            iconAnchor: [15, 15],
+            labelAnchor: [10, 0] // as I want the label to appear 2px past the icon (10 + 2 - 6)
+        });
+        L.marker([19.7647028,96.3172560], {
+            icon: myIcon
+        }).bindLabel('Nay Pyi Taw, Myanmar', {
+            noHide: true,
+            direction: 'auto'
+        }).addTo(map);
 
         //L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         //    maxZoom: 19,
