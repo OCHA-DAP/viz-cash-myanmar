@@ -16,10 +16,10 @@ body{
     font-size: 14px;
 }
 
-a {
+/*a {
     color: #F2645A;
     text-decoration: underline;
-}
+}*/
 
 a:hover {
     color: #F2645A;
